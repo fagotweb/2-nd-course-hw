@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+input,
+button,
+select {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.hero-page {
+  background-image: url(./img/topback.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: rgb(32, 32, 39);
+}
+.hero-page__content {
+  padding-top: 196px;
+  padding-bottom: 246px;
+}
+.hero-page__title {
+  font-size: 64px;
+  line-height: 100%;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.hero-page__subtitle {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  margin-bottom: 48px;
+}
+.hero-page__button {
+  background: rgb(32, 32, 39);
+  border: 1px color rgb(32, 32, 39);
+  border-radius: 60px;
+  padding: 16px 65px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 600;
+  color: #fff;
+}
+.hero-page__button:hover {
+  background: none;
+  color: #000;
+}
+
+mark {
+  font-weight: 700;
+  background: none;
+}
+
+.content {
+  background-color: rgb(32, 32, 39);
+  color: #fff;
+  padding-top: 94px;
+}
+.content__title {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+  margin-bottom: 24px;
+}
+.content__subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.content-box {
+  margin-top: 72px;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.for {
+  grid-column: span 4;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 41px;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  color: #FFFFFF;
+  flex-direction: column;
+}
+.for__item {
+  background-color: #F7F7F7;
+  border-radius: 30px;
+  padding-bottom: 36px;
+  color: rgb(32, 32, 39);
+}
+.for__item-img {
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+.for__item-details {
+  background-color: rgb(247, 247, 247);
+  align-content: flex-start;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-left: 32px;
+  margin-bottom: 26px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.for__item-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 100%;
+  margin-left: 32px;
+  margin-right: 42px;
+}/*# sourceMappingURL=style.css.map */
