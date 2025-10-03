@@ -31,7 +31,9 @@ body {
 }
 
 .hero-page {
-    background-image: url(./img/topback.jpg);
+    position: relative;
+    z-index: -2;
+    background-color: rgba(225, 255, 143, 1);;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -46,19 +48,18 @@ body {
         font-size: $font-size * 4;
         line-height: 100%;
         font-weight: 700;
-        margin-bottom: 24px;
+        padding-bottom: 24px;
     }
 
     &__subtitle {
         font-size: $font-size * 1.5;
         line-height: 32px;
         font-weight: 400;
-        margin-bottom: 48px;
+        padding-bottom: 64px;
     }
 
     &__button {
         background: rgba(32, 32, 39, 1);
-        border: 1px color rgba(32, 32, 39, 1);
         border-radius: 60px;
         padding: 16px 65px;
         text-align: center;
@@ -69,9 +70,22 @@ body {
     }
 
     &__button:hover {
-        background: none;
+        background-color: #FFFFFF;
+        border: 1px solid #000;
         color: #000;
     }
+}
+
+.hero-page::after {
+    content: " ";
+    position: absolute;
+    width: 1074px;
+    height: 1130px;
+    background-image: url(./img/starhed.svg);
+    z-index: -1;
+    top: -333px;
+    right: -488px;    
+    background-repeat: no-repeat;
 }
 
 mark {
@@ -79,10 +93,43 @@ mark {
     background: none;
 }
 
-.content {
+.big-green {
+    position: absolute;
+    z-index: 1;
+    top: 94px;
+    left: 63px;
+    opacity: 1;
+}
+
+.small {
+    position: absolute;
+    z-index: 1;
+    top: 69px;
+    left: 156px;
+    opacity: 1;
+}
+
+.big {
+    position: absolute;
+    z-index: 1;
+    bottom: 149px;
+    right: 344px;
+    opacity: 1;
+}
+
+.small-green {
+    position: absolute;
+    z-index: 1;
+    bottom: 225px;
+    right: 455px;
+    opacity: 1;
+}
+
+.container-game {
     background-color: rgba(32, 32, 39, 1);
     color: #fff;
     padding-top: 94px;
+    padding-bottom: 50px;
 
     &__title {
         font-weight: 700;
@@ -99,6 +146,7 @@ mark {
 }
 
 .content-box {
+    position: relative;
     margin-top: 72px;
     display: grid;
     gap: $gap;
@@ -116,6 +164,7 @@ mark {
     justify-content: center;
     color: $color-text;
     flex-direction: column;
+    z-index: 4;
 
     &__item {
         background-color: #F7F7F7;
@@ -127,6 +176,7 @@ mark {
     &__item-img {
         max-width: 100%;
         margin-bottom: 40px;
+        border-radius: 30px;
     }
 
     &__item-details {
@@ -149,3 +199,125 @@ mark {
         margin-right: 42px;
     }
 }
+
+.starbig {
+    position: absolute;
+    z-index: 1;
+    top: -275px;
+    right: -260px;
+}
+
+.star1 {
+    position: absolute;
+    z-index: 1;
+    top: 460px;
+    left: -76px;
+    transform: rotate(5.45deg);
+}
+
+.star2 {
+    position: absolute;
+    z-index: 1;
+    transform: rotate(5.45deg);
+    top: 410px;
+    left: -96px;
+}
+
+.star3 {
+    position: absolute;
+    z-index: 1;
+    top: -70px;
+    right: -70px;
+    transform: rotate(5.45deg);
+}
+
+.star4 {
+    position: absolute;
+    z-index: 1;
+    transform: rotate(7.08deg);
+    top: -105px;
+    right: 10px;
+}
+
+.star5 {
+    position: absolute;
+    z-index: 1;
+    top: 500px;
+    right: -70px;
+}
+
+.star6 {
+    position: absolute;
+    z-index: 1;
+    top: 555px;
+    right: 40px;
+}
+
+.container-minigames {
+    z-index: 1;
+    background-color: rgba(32, 32, 39, 1);
+    color: #fff;
+    padding-top: 46px;
+    padding-bottom: 144px;
+
+    &__title {
+        margin-bottom: 40px;
+    }
+}
+
+.minigames {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+    box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+    background: rgba(255, 255, 255, 1);
+    color: rgba(32, 32, 39, 1);
+    margin-top: 32px;
+
+    &__title {
+        font-size: $font-size * 3;
+        font-weight: 700;
+    }
+
+    &__details {
+        font-size: $font-size * 1.5;
+        font-weight: 400;
+        line-height: 32px;
+        margin-top: 24px;
+        margin-bottom: 36px;
+    }
+
+    &__button {
+        background: rgba(32, 32, 39, 1);
+        border-radius: 60px;
+        padding: 16px 76px;
+        text-align: center;
+        font-size: $font-size * 1.5;
+        line-height: 29px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    &__button:hover {
+        background-color: #FFFFFF;
+        border: 1px solid #000;
+        color: #000;
+    }
+
+    &__img {
+        height: 500px;
+        border-radius: 30px;
+    }
+}
+
+.minigames-content {
+    padding: 48px;
+    flex-direction: column
+}
+
+.minigames-reverse {
+    flex-direction: row-reverse;
+}
+
+@import 'mobile';
